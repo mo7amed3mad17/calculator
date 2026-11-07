@@ -1,0 +1,80 @@
+$date
+	Wed Nov  4 11:19:00 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module storage_tb $end
+$var wire 16 ! result [15:0] $end
+$var wire 8 " oprandB [7:0] $end
+$var wire 8 # oprandA [7:0] $end
+$var reg 2 $ a_read_addr [1:0] $end
+$var reg 2 % b_read_addr [1:0] $end
+$var reg 1 & clk $end
+$var reg 8 ' oprand_data [7:0] $end
+$var reg 1 ( oprand_we $end
+$var reg 2 ) oprand_write_addr [1:0] $end
+$var reg 1 * reset $end
+$var reg 16 + result_data [15:0] $end
+$var reg 2 , result_read_addr [1:0] $end
+$var reg 1 - result_we $end
+$var reg 2 . result_write_addr [1:0] $end
+$scope module dut $end
+$var wire 2 / a_read_addr [1:0] $end
+$var wire 2 0 b_read_addr [1:0] $end
+$var wire 1 & clk $end
+$var wire 8 1 oprand_data [7:0] $end
+$var wire 1 ( oprand_we $end
+$var wire 2 2 oprand_write_addr [1:0] $end
+$var wire 1 * reset $end
+$var wire 16 3 result_data [15:0] $end
+$var wire 2 4 result_read_addr [1:0] $end
+$var wire 1 - result_we $end
+$var wire 2 5 result_write_addr [1:0] $end
+$var reg 8 6 oprandA [7:0] $end
+$var reg 8 7 oprandB [7:0] $end
+$var reg 16 8 result [15:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 9 i [31:0] $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop1 $end
+$var integer 32 : i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#127000
+$dumpvars
+b100 :
+b100 9
+b10111011100000 8
+b110010 7
+b11011000 6
+b11 5
+b11 4
+b10111011100000 3
+b11 2
+b11011000 1
+b10 0
+b11 /
+b11 .
+0-
+b11 ,
+b10111011100000 +
+0*
+b11 )
+0(
+b11011000 '
+1&
+b10 %
+b11 $
+b11011000 #
+b110010 "
+b10111011100000 !
+$end

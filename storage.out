@@ -1,0 +1,158 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5b4a7999c5a0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x5b4a7999c730 .scope module, "storage" "storage" 3 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "oprand_we";
+    .port_info 3 /INPUT 2 "oprand_write_addr";
+    .port_info 4 /INPUT 8 "oprand_data";
+    .port_info 5 /INPUT 2 "a_read_addr";
+    .port_info 6 /INPUT 2 "b_read_addr";
+    .port_info 7 /OUTPUT 8 "oprandA";
+    .port_info 8 /OUTPUT 8 "oprandB";
+    .port_info 9 /INPUT 1 "result_we";
+    .port_info 10 /INPUT 2 "result_write_addr";
+    .port_info 11 /INPUT 16 "result_data";
+    .port_info 12 /INPUT 2 "result_read_addr";
+    .port_info 13 /OUTPUT 16 "result";
+o0x74902d6a6048 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x5b4a799edd30_0 .net "a_read_addr", 1 0, o0x74902d6a6048;  0 drivers
+o0x74902d6a6078 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x5b4a799ede30_0 .net "b_read_addr", 1 0, o0x74902d6a6078;  0 drivers
+o0x74902d6a60a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5b4a799edf10_0 .net "clk", 0 0, o0x74902d6a60a8;  0 drivers
+v0x5b4a799edfb0_0 .var/s "oprandA", 7 0;
+v0x5b4a799ee090_0 .var/s "oprandB", 7 0;
+o0x74902d6a6138 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x5b4a799ee1c0_0 .net/s "oprand_data", 7 0, o0x74902d6a6138;  0 drivers
+v0x5b4a799ee2a0 .array/s "oprand_mem", 3 0, 7 0;
+o0x74902d6a6228 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5b4a799ee3e0_0 .net "oprand_we", 0 0, o0x74902d6a6228;  0 drivers
+o0x74902d6a6258 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x5b4a799ee4a0_0 .net "oprand_write_addr", 1 0, o0x74902d6a6258;  0 drivers
+o0x74902d6a6288 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5b4a799ee580_0 .net "reset", 0 0, o0x74902d6a6288;  0 drivers
+v0x5b4a799ee640_0 .var/s "result", 15 0;
+o0x74902d6a62e8 .functor BUFZ 16, C4<zzzzzzzzzzzzzzzz>; HiZ drive
+v0x5b4a799ee720_0 .net/s "result_data", 15 0, o0x74902d6a62e8;  0 drivers
+v0x5b4a799ee800 .array/s "result_mem", 3 0, 15 0;
+o0x74902d6a63d8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x5b4a799ee940_0 .net "result_read_addr", 1 0, o0x74902d6a63d8;  0 drivers
+o0x74902d6a6408 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5b4a799eea20_0 .net "result_we", 0 0, o0x74902d6a6408;  0 drivers
+o0x74902d6a6438 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x5b4a799eeae0_0 .net "result_write_addr", 1 0, o0x74902d6a6438;  0 drivers
+v0x5b4a799ee2a0_0 .array/port v0x5b4a799ee2a0, 0;
+v0x5b4a799ee2a0_1 .array/port v0x5b4a799ee2a0, 1;
+v0x5b4a799ee2a0_2 .array/port v0x5b4a799ee2a0, 2;
+E_0x5b4a799d5ef0/0 .event anyedge, v0x5b4a799edd30_0, v0x5b4a799ee2a0_0, v0x5b4a799ee2a0_1, v0x5b4a799ee2a0_2;
+v0x5b4a799ee2a0_3 .array/port v0x5b4a799ee2a0, 3;
+v0x5b4a799ee800_0 .array/port v0x5b4a799ee800, 0;
+E_0x5b4a799d5ef0/1 .event anyedge, v0x5b4a799ee2a0_3, v0x5b4a799ede30_0, v0x5b4a799ee940_0, v0x5b4a799ee800_0;
+v0x5b4a799ee800_1 .array/port v0x5b4a799ee800, 1;
+v0x5b4a799ee800_2 .array/port v0x5b4a799ee800, 2;
+v0x5b4a799ee800_3 .array/port v0x5b4a799ee800, 3;
+E_0x5b4a799d5ef0/2 .event anyedge, v0x5b4a799ee800_1, v0x5b4a799ee800_2, v0x5b4a799ee800_3;
+E_0x5b4a799d5ef0 .event/or E_0x5b4a799d5ef0/0, E_0x5b4a799d5ef0/1, E_0x5b4a799d5ef0/2;
+E_0x5b4a799d8a00 .event posedge, v0x5b4a799edf10_0;
+S_0x5b4a799c64b0 .scope begin, "$ivl_for_loop0" "$ivl_for_loop0" 3 36, 3 36 0, S_0x5b4a7999c730;
+ .timescale 0 0;
+v0x5b4a799c6690_0 .var/2s "i", 31 0;
+    .scope S_0x5b4a7999c730;
+T_0 ;
+    %wait E_0x5b4a799d8a00;
+    %load/vec4 v0x5b4a799ee580_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %fork t_1, S_0x5b4a799c64b0;
+    %jmp t_0;
+    .scope S_0x5b4a799c64b0;
+t_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x5b4a799c6690_0, 0, 32;
+T_0.2 ;
+    %load/vec4 v0x5b4a799c6690_0;
+    %cmpi/s 4, 0, 32;
+    %jmp/0xz T_0.3, 5;
+    %pushi/vec4 0, 0, 8;
+    %ix/getv/s 3, v0x5b4a799c6690_0;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x5b4a799ee2a0, 0, 4;
+    %pushi/vec4 0, 0, 16;
+    %ix/getv/s 3, v0x5b4a799c6690_0;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x5b4a799ee800, 0, 4;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x5b4a799c6690_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %cast2;
+    %store/vec4 v0x5b4a799c6690_0, 0, 32;
+    %jmp T_0.2;
+T_0.3 ;
+    %end;
+    .scope S_0x5b4a7999c730;
+t_0 %join;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x5b4a799ee3e0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.4, 8;
+    %load/vec4 v0x5b4a799ee1c0_0;
+    %load/vec4 v0x5b4a799ee4a0_0;
+    %pad/u 4;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x5b4a799ee2a0, 0, 4;
+T_0.4 ;
+    %load/vec4 v0x5b4a799eea20_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.6, 8;
+    %load/vec4 v0x5b4a799ee720_0;
+    %load/vec4 v0x5b4a799eeae0_0;
+    %pad/u 4;
+    %ix/vec4 3;
+    %ix/load 4, 0, 0; Constant delay
+    %assign/vec4/a/d v0x5b4a799ee800, 0, 4;
+T_0.6 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x5b4a7999c730;
+T_1 ;
+Ewait_0 .event/or E_0x5b4a799d5ef0, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v0x5b4a799edd30_0;
+    %pad/u 4;
+    %ix/vec4 4;
+    %load/vec4a v0x5b4a799ee2a0, 4;
+    %store/vec4 v0x5b4a799edfb0_0, 0, 8;
+    %load/vec4 v0x5b4a799ede30_0;
+    %pad/u 4;
+    %ix/vec4 4;
+    %load/vec4a v0x5b4a799ee2a0, 4;
+    %store/vec4 v0x5b4a799ee090_0, 0, 8;
+    %load/vec4 v0x5b4a799ee940_0;
+    %pad/u 4;
+    %ix/vec4 4;
+    %load/vec4a v0x5b4a799ee800, 4;
+    %store/vec4 v0x5b4a799ee640_0, 0, 16;
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "storage.sv";
